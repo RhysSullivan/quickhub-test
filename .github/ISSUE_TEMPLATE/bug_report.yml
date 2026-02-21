@@ -1,59 +1,32 @@
 name: Bug report
-description: Report a reproducible problem.
-title: "[Bug]: "
+description: Report a bug.
+title: "[Bug] "
 labels:
   - bug
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to file a bug report.
   - type: textarea
-    id: summary
+    id: bug
     attributes:
-      label: Summary
-      description: Briefly describe the issue.
-      placeholder: What happened?
+      label: What happened?
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      description: Include exact steps so we can reproduce the issue.
       placeholder: |
-        1. Go to ...
-        2. Click ...
-        3. See error ...
+        1. ...
+        2. ...
+        3. ...
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
       label: Expected behavior
-      description: What did you expect to happen?
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual behavior
-      description: What actually happened?
     validations:
       required: true
   - type: input
-    id: environment
+    id: env
     attributes:
       label: Environment
-      description: Browser, OS, app version, commit SHA, etc.
-      placeholder: Ubuntu 24.04, Bun 1.2.x, Chrome 122
-    validations:
-      required: false
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant logs or screenshots
-      description: Paste logs or add screenshots to help debugging.
-      render: shell
-    validations:
-      required: false
